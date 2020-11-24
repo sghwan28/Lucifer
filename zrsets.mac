@@ -1,0 +1,28 @@
+read             
+cell p.cll,10,10,10
+#                
+pdf              
+  set rang,10,0.02
+  set qsig,0.0     
+  set rad,neutron    
+#                
+  set qmax,0.0  
+  set therm,off 
+  calc             
+  save pdf,pattern1.pdf      
+#            
+  set qmax,20.0
+  set therm,off
+  calc         
+  save pdf,pattern2.pdf  
+#                   
+  set qmax,0.0        
+  set therm,gauss     
+  calc                
+  save pdf,pattern3.pdf
+#
+  set qmax,20.0        
+  set therm,gauss     
+  calc                
+  save pdf,pattern4.pdf
+exit         
